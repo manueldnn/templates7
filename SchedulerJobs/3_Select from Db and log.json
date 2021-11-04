@@ -1,0 +1,84 @@
+{
+  "ApiId": "91434ebf4550cc74619bee",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Select from Db and log",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "RunSql",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select * from files\nwhere fileid = 12",
+        "BindTokens": "",
+        "OutputTokenName": "myfile",
+        "ExtractColumns": [
+          {
+            "value": "filename",
+            "name": "filename"
+          },
+          {
+            "value": "Extension",
+            "name": "Extension"
+          }
+        ],
+        "OnError": [],
+        "ShowErrors": false
+      }
+    },
+    {
+      "ActionType": "LogEvent",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 1,
+      "Parameters": {
+        "EventType": {
+          "Expression": "",
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "UserID": "1",
+        "LogProperties": [
+          {
+            "value": "[myfile]",
+            "name": "myfile"
+          },
+          {
+            "value": "[myfile:filename]",
+            "name": "myfilename"
+          },
+          {
+            "value": "[myfile:Extension]",
+            "name": "myfilepath"
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": [
+    {
+      "ActionType": "LogEvent",
+      "ExecutionType": "OnError",
+      "OrderIndex": 2,
+      "Parameters": {
+        "EventType": {
+          "Expression": "",
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "UserID": "2",
+        "LogProperties": [
+          {
+            "value": "joberror",
+            "name": "onerror"
+          }
+        ]
+      }
+    }
+  ]
+}
