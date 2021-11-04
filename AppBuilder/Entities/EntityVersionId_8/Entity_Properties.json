@@ -1,0 +1,94 @@
+[
+  {
+    "Id": 16,
+    "UniqueId": "e0ca370e-fe84-4f24-96a5-a014caa7b836",
+    "EntityVersionId": 8,
+    "Name": "Name",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 1
+  },
+  {
+    "Id": 17,
+    "UniqueId": "ef673f37-9452-4f97-848a-35a9a4ff8894",
+    "EntityVersionId": 8,
+    "Name": "Docs",
+    "Type": {
+      "Id": "EntityRef",
+      "Name": "Entity Reference",
+      "InputType": {
+        "Id": "EntityRef",
+        "Name": "Entity Reference",
+        "ValueType": "EntityRef",
+        "Length": 4
+      }
+    },
+    "EntityVersionRefId": 3,
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 4
+  },
+  {
+    "Id": 18,
+    "UniqueId": "2281da3d-ef8c-41d9-ae82-ebeab9034ed8",
+    "EntityVersionId": 8,
+    "Name": "Image",
+    "Type": {
+      "Id": "EntityRef",
+      "Name": "Entity Reference",
+      "InputType": {
+        "Id": "EntityRef",
+        "Name": "Entity Reference",
+        "ValueType": "EntityRef",
+        "Length": 4
+      }
+    },
+    "EntityVersionRefId": 4,
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 5
+  },
+  {
+    "Id": 19,
+    "UniqueId": "6631d2b6-ba12-46eb-8010-c168a533e9e3",
+    "EntityVersionId": 8,
+    "Name": "Email",
+    "Type": {
+      "Id": "Email",
+      "Name": "Email",
+      "InputType": {
+        "Id": "Email",
+        "Name": "Email",
+        "ValueType": "String",
+        "Length": 320,
+        "Icon": "mail_outline"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 6
+  }
+]
