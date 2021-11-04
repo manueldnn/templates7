@@ -1,0 +1,74 @@
+{
+  "InputFields": [],
+  "OutputFields": [
+    {
+      "Id": 7,
+      "Name": "username",
+      "DefaultValue": "[username]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 8,
+      "Name": "css",
+      "DefaultValue": "[css]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "Id": 2,
+  "UniqueId": "516978db-5c2d-4bfb-bfaa-91c2473d78ff",
+  "EnvironmentId": 1,
+  "Name": "New Workflow",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 4,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 5,
+        "Description": null,
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "InjectData",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 22,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "[TKNParam2:testrzrtk(Userid=\"1\")]",
+                "name": "css"
+              },
+              {
+                "value": "[TestDbo:DB2.username]",
+                "name": "username"
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_10oz03t"
+      }
+    ]
+  },
+  "CreatedBy": 2,
+  "CreatedOn": "2021-11-03T10:49:12.8806179+00:00",
+  "LastModifiedBy": 2,
+  "LastModifiedOn": "2021-11-03T10:49:12.8806179+00:00",
+  "DiagramXML": null,
+  "NamespaceUid": "85854c9f-88f1-4b19-9864-baaa63b21849"
+}
