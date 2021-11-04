@@ -1,0 +1,9 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+<ul>
+@foreach (var user in TKNParam2.TestUsers(Userid:@TknParams.Userid)) {
+    <li>@user.FirstName @user.Email</li>
+}
+x @TknParams.Userid
+</ul>
+
