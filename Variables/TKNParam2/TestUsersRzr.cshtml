@@ -1,0 +1,8 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+<ul>
+@foreach (var user in TKNParam2.TestUsers("(userid=[TknParams:userid])")) {
+    
+    <i class="glyphicon glyphicon-map-marker"></i> <cite title="Line1">@user.FirstName</site><br /><cite title="" style="margin-left:15px">@user.Email </cite>
+}
+</ul>
