@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "TestDbo",
+    "description": "Tokens used for testing, should not be permanent contents here"
+  },
+  "name": "DBwithBrackets",
+  "description": "Jim Anthony - Dale's email https://mail.google.com/mail/u/1/#inbox/FMfcgzGljvPVNtLhTmJZHVJCrjpGjDvd",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select * from [dbo].users",
+    "defaultColumn": "UserName",
+    "columns": "Username\nFirstname",
+    "connectionString": "",
+    "type": "db"
+  }
+}

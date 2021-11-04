@@ -1,0 +1,31 @@
+{
+  "ApiId": "8242a992fa82d45b63070c",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "New Job2",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "LogEvent",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "Parameters": {
+        "EventType": {
+          "Expression": "",
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "UserID": "2",
+        "LogProperties": [
+          {
+            "value": "merge",
+            "name": "test"
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 5,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "TestDbo",
+    "description": "Tokens used for testing, should not be permanent contents here"
+  },
+  "name": "DB2",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select * from users\nwhere userid = 2",
+    "defaultColumn": "userid",
+    "columns": "username\nfirstname",
+    "connectionString": "",
+    "type": "db"
+  }
+}

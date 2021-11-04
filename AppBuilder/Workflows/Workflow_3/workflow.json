@@ -1,0 +1,170 @@
+{
+  "InputFields": [],
+  "OutputFields": [
+    {
+      "Id": 9,
+      "Name": "filename",
+      "DefaultValue": "[filename]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 3,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 10,
+      "Name": "filesize",
+      "DefaultValue": "[filesize]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 3,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "Id": 3,
+  "UniqueId": "cb2f8894-d04f-4d64-ae7c-bc58ddf62acc",
+  "EnvironmentId": 1,
+  "Name": "Db values",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 5,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 6,
+        "Description": null,
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "RunSql",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 23,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 24,
+            "Name": "QueryTimeout",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 25,
+            "Name": "SqlQuery",
+            "Value": "select * from files \nwhere fileid = 12",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 26,
+            "Name": "BindTokens",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 27,
+            "Name": "OutputTokenName",
+            "Value": "fileval",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 28,
+            "Name": "ExtractColumns",
+            "Value": [
+              {
+                "value": "filename",
+                "name": "filename"
+              },
+              {
+                "value": "size",
+                "name": "size"
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 29,
+            "Name": "OnError",
+            "Value": {
+              "Id": 6,
+              "EventName": "OnError",
+              "Actions": []
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 30,
+            "Name": "ShowErrors",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 6,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1px7mip"
+      },
+      {
+        "Id": 7,
+        "Description": null,
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "InjectData",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 31,
+            "Name": "Data",
+            "Value": [
+              {
+                "value": "[fileval:filename]",
+                "name": "filename"
+              },
+              {
+                "value": "[fileval:size]",
+                "name": "filesize"
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 7,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_19enygm"
+      }
+    ]
+  },
+  "CreatedBy": 1,
+  "CreatedOn": "2021-11-04T15:00:05.3602964+00:00",
+  "LastModifiedBy": 1,
+  "LastModifiedOn": "2021-11-04T15:00:20.564923+00:00",
+  "DiagramXML": null,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}
