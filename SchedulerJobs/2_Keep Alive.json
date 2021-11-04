@@ -1,0 +1,73 @@
+{
+  "ApiId": "94431d9b8fb9fd17004697",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Keep Alive",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "RepeatInterval",
+      "Parameters": {
+        "Start": {
+          "Date": "",
+          "Time": "12:00:00AM"
+        },
+        "Interval": {
+          "Qty": "12",
+          "Unit": {
+            "Value": "Minutes",
+            "IsExpression": false,
+            "Parameters": {}
+          }
+        },
+        "SkipIfRunning": "",
+        "OnMissfire": {
+          "Expression": "",
+          "Value": "FireNow",
+          "IsExpression": false,
+          "Parameters": {}
+        }
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PostData",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "Parameters": {
+        "InputParameters": "",
+        "URL": "/keepalive.aspx",
+        "UrlTokenContext": {
+          "Expression": "",
+          "Value": "Url",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "UseSSL": "",
+        "Timeout": "",
+        "HttpMethod": {
+          "Expression": "",
+          "Value": "GET",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "Data": "",
+        "DoNotEscapeTokens": "",
+        "DisableReferer": "",
+        "Headers": "",
+        "UseDNNProxySettings": "",
+        "AddCurrentCookies": "",
+        "OutputParameters": "",
+        "CookieContainerToken": "",
+        "OutputTokenName": "",
+        "OutputHeaders": "",
+        "IgnoreErrors": "",
+        "Events": "",
+        "OnError": []
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
