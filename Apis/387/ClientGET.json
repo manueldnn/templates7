@@ -1,0 +1,67 @@
+{
+  "Name": "Client",
+  "Description": "Returns the information of a Client record in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 7,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.3977f9b3-aa73-4200-a5d1-e7b1821a4c5c",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "3977f9b3-aa73-4200-a5d1-e7b1821a4c5c"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "Name",
+            "value": "[Record:Name]"
+          },
+          {
+            "name": "Email",
+            "value": "[Record:Email]"
+          },
+          {
+            "name": "Address",
+            "value": "[Record:Address]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
